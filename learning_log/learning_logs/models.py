@@ -11,7 +11,7 @@ class Topic(models.Model):
         return self.text
 
 class Entry(models.Model):
-    """学到的有关某个主题的具体知识"""
+    """学到的有关某个主题的具体知识条目"""
 
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField()
